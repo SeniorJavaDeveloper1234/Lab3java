@@ -89,9 +89,7 @@ public class TeamBattle extends Battle {
 
             if (attacker == null || defender == null) continue;
 
-            double defenderHealth = defender.getHealth();
-            double attack = attack(attacker.getDamage(), random);
-            defender.setHealth(defenderHealth - attack);
+            double attack = attacker.attack(random, defender);
 
             if(defender.getHealth() < 0){
                 defender.setHealth(0);
@@ -140,9 +138,6 @@ public class TeamBattle extends Battle {
         }
     }
 
-    @Override
-    protected double attack(double maxDamage, Random random){
-        return random.nextDouble(5.0, maxDamage);
-    }
+
 
 }

@@ -1,8 +1,6 @@
 package com.game.battlemodes;
 
 import com.game.droids.Droid;
-import javafx.application.Platform;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -72,9 +70,7 @@ public class OneVoneBattle extends Battle {
                 defender = getDroid1();
             }
 
-            double defenderHealth = defender.getHealth();
-            double attack = attack(attacker.getDamage(), random);
-            defender.setHealth(defenderHealth - attack);
+            double attack = attacker.attack(random, defender);
 
             if(defender.getHealth() < 0) {
                 defender.setHealth(0);
@@ -111,9 +107,6 @@ public class OneVoneBattle extends Battle {
         droid2.setName(droid2.getName() + "2");
     }
 
-    @Override
-    protected double attack(double maxDamage, Random random){
-        return random.nextDouble(5.0, maxDamage);
-    }
+
 
 }

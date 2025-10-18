@@ -15,20 +15,15 @@ import java.util.ResourceBundle;
 
 public class MainMenuSceneController implements Initializable {
 
-
-    // Отримання елементів з FXML
-    @FXML private GridPane rootPane; // Кореневий елемент (для прив'язки)
+    @FXML private GridPane rootPane;
     @FXML private Label titleLabel;
     @FXML private Button startButton;
     @FXML private Button settingsButton;
     @FXML private Button exitButton;
 
-    // Метод викликається після того, як всі FXML-елементи створені
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        // Потрібно дочекатися, поки rootPane буде вставлений у Scene
         rootPane.sceneProperty().addListener((observable, oldScene, newScene) -> {
             if (newScene != null) {
 
@@ -72,7 +67,6 @@ public class MainMenuSceneController implements Initializable {
     public void handleExt(ActionEvent event){
         Platform.exit();
 
-        //sceneManager.switchScene("GameMenu.fxml", "GameMenu");
     }
 
 
