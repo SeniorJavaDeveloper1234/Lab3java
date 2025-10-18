@@ -1,7 +1,7 @@
 package com.game.controller;
 
 import com.game.Main;
-import com.game.battlemodes.TeamBattle; // ⬅️ Новий клас
+import com.game.battlemodes.TeamBattle;
 import com.game.droids.BoxerDroid;
 import com.game.droids.Droid;
 import com.game.droids.DuelantDroid;
