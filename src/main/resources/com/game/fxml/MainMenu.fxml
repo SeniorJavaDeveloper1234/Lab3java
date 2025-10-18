@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>  <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>    <?import javafx.geometry.Insets?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="com.game.controller.MainMenuSceneController"
+          prefHeight="600.0" prefWidth="800.0"
+          alignment="CENTER"
+          vgap="20"
+          fx:id="rootPane">
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" percentWidth="32.0" />
+        <ColumnConstraints hgrow="SOMETIMES" percentWidth="36.0" />
+        <ColumnConstraints hgrow="ALWAYS" percentWidth="32.0" />
+    </columnConstraints>
+
+    <rowConstraints>
+        <RowConstraints vgrow="SOMETIMES" percentHeight="35.0" />
+        <RowConstraints vgrow="SOMETIMES" percentHeight="20.0" />
+        <RowConstraints vgrow="SOMETIMES" percentHeight="20.0" />
+        <RowConstraints vgrow="SOMETIMES" percentHeight="20.0" />
+        <RowConstraints vgrow="ALWAYS" percentHeight="5.0" />
+    </rowConstraints>
+
+    <Label text="БИТВА ДРОЇДІВ"
+           style=" -fx-font-weight: bold;"
+           GridPane.rowIndex="0"
+           GridPane.columnIndex="1"
+           alignment="CENTER"
+           maxWidth="Infinity"
+           maxHeight="Infinity"
+
+           fx:id="titleLabel"/>
+
+    <Button text="ПОЧАТИ ГРУ"
+            onAction="#handleStartGame"
+            GridPane.rowIndex="1"
+            GridPane.columnIndex="1"
+            maxWidth="Infinity"
+            maxHeight="Infinity"
+    fx:id="startButton"/>
+
+    <Button text="ПРОЧИТАТИ БІЙ"
+            onAction="#handleRead"
+            GridPane.rowIndex="2"
+            GridPane.columnIndex="1"
+            maxWidth="Infinity"
+            maxHeight="Infinity"
+    fx:id="settingsButton"/>
+
+    <Button text="ВИХІД"
+            onAction="#handleExt"
+            GridPane.rowIndex="3"
+            GridPane.columnIndex="1"
+            maxWidth="Infinity"
+            maxHeight="Infinity"
+    fx:id="exitButton"/>
+
+</GridPane>

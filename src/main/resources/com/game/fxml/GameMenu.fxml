@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="com.game.controller.GameMenuSceneController"
+          prefHeight="600.0" prefWidth="800.0"
+          alignment="CENTER"
+          vgap="20"
+          fx:id="rootPane">
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" percentWidth="32.0" />
+        <ColumnConstraints hgrow="SOMETIMES" percentWidth="36.0" />
+        <ColumnConstraints hgrow="ALWAYS" percentWidth="32.0" />
+    </columnConstraints>
+
+    <rowConstraints>
+        <RowConstraints vgrow="SOMETIMES" percentHeight="35.0" />
+        <RowConstraints vgrow="SOMETIMES" percentHeight="20.0" />
+        <RowConstraints vgrow="SOMETIMES" percentHeight="20.0" />
+        <RowConstraints vgrow="SOMETIMES" percentHeight="20.0" />
+        <RowConstraints vgrow="ALWAYS" percentHeight="5.0" />
+    </rowConstraints>
+
+    <Button text="1 НА 1"
+
+            GridPane.rowIndex="1"
+            GridPane.columnIndex="1"
+            maxWidth="Infinity"
+            maxHeight="Infinity"
+            onAction="#handleOneVoneMenuButton"
+            fx:id="oneVoneButton"/>
+
+    <Button text="КОМАНДНА БИТВА"
+            onAction="#handleTeamMenuButton"
+            GridPane.rowIndex="2"
+            GridPane.columnIndex="1"
+            maxWidth="Infinity"
+            maxHeight="Infinity"
+            fx:id="teamButton"/>
+
+    <Button text="ПОВЕРНУТИСЯ В ГОЛОВНЕ МЕНЮ"
+            onAction="#handleExitToMainnMenuButton"
+            GridPane.rowIndex="3"
+            GridPane.columnIndex="1"
+            maxWidth="Infinity"
+            maxHeight="Infinity"
+            fx:id="exitToMainnMenuButton"/>
+
+
+
+</GridPane>
